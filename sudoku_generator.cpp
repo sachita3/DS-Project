@@ -67,14 +67,14 @@ Sudoku::Sudoku()
   {
     this->gridPos[i] = i;
   }
-
+// shuffling pos array
   random_shuffle(this->gridPos, (this->gridPos) + 81, genRandNum);
 
   for(int i=0;i<9;i++)
   {
     this->guessNum[i]=i+1;
   }
-
+// shuffling no array
   random_shuffle(this->guessNum, (this->guessNum) + 9, genRandNum);
 
   // Initialising the grid
