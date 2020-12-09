@@ -50,7 +50,7 @@ void Sudoku::createSeed()
   {
     for(int j=0;j<9;j++)
     {
-      this->solnGrid[i][j] = this->grid[i][j];
+      this->solnGrid[i][j] = this->grid[i][j];    //saving the soln grid
     }
   }
 }
