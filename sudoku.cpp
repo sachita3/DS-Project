@@ -1,7 +1,6 @@
 #include<iostream>
 #include<graphics.h>
 #include<ctime>
-#include "sudokugenerator.h"
 
 int check_row(int *p);
 int check_colm(int *p);
@@ -17,12 +16,12 @@ float tm;
 short cc[9][9];
 int mat_sud[9][9];
 char str[20];
+void load_cc();
+void initialize();
+void level();
 
 int main(){
-
-    void load_cc();
-    void initialize();
-    void level();
+    
     int gd=0,gm;
     int c[9],r[9],*p,i,j,c_temp=0,r_temp=0;
     int key,value;
@@ -312,12 +311,12 @@ void level(){
 }
 
 void initializer(int c){
-    
+
     short mat_m[9][9] = get_puzzle();
-    
-    for(int m = 0; m < 9; m++)
-        for(int n = 0; n < 9; n++)
-            mat_sud[m][n] = mat_m[m][n];
+
+   for(int m = 0; m < 9; m++)
+       for(int n = 0; n < 9; n++)
+           mat_sud[m][n] = mat_m[m][n];
 }
 
 void show_level(){
